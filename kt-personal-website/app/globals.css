@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFF8F5;
+  --foreground: #3F3D53;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-merriweather: 'Merriweather', serif;
+  --font-cormorant: 'Cormorant', serif;
+  --font-istok-web: 'Istok Web', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #3F3D53;
+    --foreground: #FFF8F5;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-family: var(--font-istok-web)
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant);
+}
+
+nav, footer {
+  font-family: var(--font-merriweather);
+}
